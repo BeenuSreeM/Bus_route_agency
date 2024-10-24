@@ -1,0 +1,112 @@
+/* General Portfolio Section Styles */
+.portfolio {
+  padding: 60px 0;
+  background-color: black; /* Set background color to black */
+}
+
+.portfolio .section-t {
+  margin-bottom: 40px;
+}
+
+.portfolio .section-t h3 {
+  font-size: 36px;
+  color: var(--clr-white);
+  margin-bottom: 20px;
+}
+
+.portfolio .section-t p {
+  font-size: 18px;
+  color: var(--clr-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.portfolio .item-list {
+  display: grid;
+  grid-gap: 40px;
+  margin-top: 40px;
+}
+
+/* Portfolio Item Styles */
+.portfolio .item {
+  height: 420px; /* Set fixed height */
+  width: 100%; /* Ensures item takes full width of container */
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.portfolio .item * {
+  z-index: 1; /* Ensures content appears on top of the background image */
+}
+
+.portfolio .item::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(122, 117, 26, 0.6) 0%,
+    rgba(188, 155, 34, 0.7) 100%
+  ); /* Custom bus branding gradient */
+  left: 0;
+  top: 0;
+  z-index: 0; /* Place gradient behind content */
+}
+
+.portfolio .item-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--clr-white);
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--clr-white);
+  padding-bottom: 20px;
+  z-index: 1; /* Keep title on top of background */
+}
+
+.portfolio .text {
+  font-size: 16px;
+  color: var(--clr-light);
+  z-index: 1; /* Keep text on top */
+}
+
+/* Hover effects */
+.portfolio .item:hover::after {
+  opacity: 0.5; /* Reduce gradient opacity on hover */
+}
+
+.portfolio .item:hover * {
+  opacity: 1;
+  transition: var(--transition);
+}
+
+/* Responsive Grid Layout */
+@media screen and (min-width: 768px) {
+  .portfolio .item-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio .item-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio .item * {
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .portfolio .item:hover * {
+    opacity: 1;
+  }
+
+  .portfolio .item:hover::after {
+    opacity: 1;
+  }
+}

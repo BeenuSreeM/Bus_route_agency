@@ -1,0 +1,52 @@
+.qualities {
+    background-color: #000; /* Black background */
+    padding: 60px 0; /* Increased padding */
+  }
+  
+  .qualities .section-t {
+    margin-bottom: 40px; /* Increased margin for better spacing */
+  }
+  
+  .qualities .section-t h3 {
+    font-size: 2.5rem; /* Increased font size for the title */
+    color: #bc9b22; /* Bus brand color */
+  }
+  
+  .qualities .section-t p {
+    font-size: 1.2rem; /* Increased font size for paragraph */
+    color: #fff; /* White text for contrast on black background */
+  }
+  
+  .qualities .item-icon {
+    margin-right: 28px;
+    font-size: 50px; /* Increased icon size */
+    color: #bc9b22; /* Bus-related theme color */
+  }
+  
+  .qualities .item-title {
+    margin-top: 0;
+    font-size: 1.8rem; /* Increased title font size */
+    color: #fff; /* White text for readability */
+  }
+  
+  .qualities .item-text {
+    font-size: 1.1rem; /* Increased text font size */
+    color: #fff; /* White text */
+  }
+  
+  .qualities .item-list {
+    row-gap: 40px; /* More spacing between items */
+  }
+  
+  .qualities-content {
+    row-gap: 60px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .qualities-content {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      column-gap: 60px;
+    }
+  }
+  

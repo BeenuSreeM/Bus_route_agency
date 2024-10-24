@@ -1,0 +1,140 @@
+/* General Styles */
+:root {
+    --clr-black: #000;
+    --clr-white: #fff;
+    --clr-bus-gold: #bc9b22; /* Bus-related gold color */
+    --clr-light-gold: #cac67f; /* Lighter gold for hover */
+    --clr-crazy-blue: #59a0ea; /* Keep the existing blue */
+}
+
+.contact {
+    padding-top: 60px;
+}
+
+.contact .contact-content {
+    row-gap: 60px;
+}
+
+.contact .form-control {
+    height: 56px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: var(--clr-black);
+    width: 100%;
+    margin-bottom: 0;
+    color: var(--clr-white);
+    font-family: inherit;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contact .form-control-text {
+    display: block;
+    font-size: 16px;
+    color: var(--clr-white);
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 6px;
+}
+
+.contact .submit-btn {
+    background-color: var(--clr-bus-gold); /* Button color changed to bus-related gold */
+    color: var(--clr-white);
+    text-transform: uppercase;
+    padding: 16px 32px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contact .submit-btn:hover {
+    background: var(--clr-light-gold); /* Hover color updated to lighter gold */
+}
+
+.contact .map-content {
+    margin-top: 80px;
+}
+
+.info {
+    margin-top: -10px;
+    background-color: var(--clr-black); /* Black background for info section */
+}
+
+.info .item {
+    background-color: var(--clr-bus-gold); /* Bus-related gold for items */
+    padding: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.info .item:hover {
+    background-color: var(--clr-light-gold); /* Change to lighter gold on hover */
+}
+
+.info .item::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 5px;
+    background: var(--clr-crazy-blue);
+    transition: 0.3s ease;
+}
+
+.info .item:hover::after {
+    width: 100%;
+}
+
+.info .item-info-text {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--clr-white);
+}
+
+.info .item-icon {
+    font-size: 45px;
+}
+
+.info .item-list {
+    row-gap: 30px;
+}
+
+.info .item-link {
+    margin-top: 18px;
+    display: inline-block;
+    color: var(--clr-light-gold); /* Change link color to lighter gold */
+    transition: 0.3s ease;
+}
+
+.info .item:hover .item-link {
+    color: var(--clr-white); /* Change link color on hover */
+}
+
+/* Responsive styles remain unchanged */
+@media screen and (min-width: 768px) {
+    .info .item-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .info .item-list {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contact .contact-content {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        row-gap: 0;
+        align-items: center;
+    }
+}

@@ -1,0 +1,54 @@
+:root {
+    --clr-primary-gold: #bc9b22; /* Primary gold color */
+  }
+  
+  .header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url(../../assets/images/about_main_img.jpg) center/cover no-repeat;
+  }
+  
+  .header-title {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.2;
+    background: linear-gradient(to right, var(--clr-primary-gold), #a58c1a); /* Gradient using the new gold color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Creates a gradient text effect */
+  }
+  
+  .header-btn {
+    align-self: center !important;
+    background-color: var(--clr-primary-gold); /* Button background with the new gold color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .header-btn:hover {
+    background-color: #a58c1a; /* Darker gold on hover */
+  }
+  
+  .header-btn span {
+    margin-left: 10px;
+  }
+  
+  .text-lead {
+    color: #eee;
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center; /* Center align text */
+  }
+  
+  @media screen and (min-width: 600px) {
+    .header-title {
+      font-size: 88px; /* Larger title on bigger screens */
+    }
+    .header-content * {
+      max-width: 920px; /* Wider content for larger screens */
+    }
+  }
+  

@@ -1,0 +1,46 @@
+:root {
+    --clr-primary-gold: #bc9b22; /* Gold color for bus branding */
+    --clr-secondary-gold: #7a751a; /* Secondary gold for accent */
+    --clr-white: #fff; /* White text */
+    --clr-dark: #2c2c2c; /* Dark background */
+}
+
+.about {
+    padding: 60px 0;
+}
+
+.about-content {
+    row-gap: 40px;
+}
+
+.about .section-title h3 {
+    font-size: 36px;
+    color: var(--clr-primary-gold); /* Title in gold to match branding */
+}
+
+.text {
+    color: var(--clr-white); /* Text in white for contrast */
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.content-left img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+    .about-content {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about-content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 60px;
+    }
+}
